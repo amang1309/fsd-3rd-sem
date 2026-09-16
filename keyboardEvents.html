@@ -1,0 +1,42 @@
+<!-- create a form box, that have three input fields namely onkeydown, onkeyup and onkeypress. 
+
+1. styling such that when we enter the name of the color, it changes the color 
+2. without triggerring OK, the value should be stored. 
+use DOM manipulation to achieve this. (this.value)
+lets start -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard events</title>
+</head>
+<body>
+
+    <form>
+        <label for="keydown">On Key Down:</label>
+        <input type="text" id="keydown" onkeydown="showAlert(event, 'keydown')"><br><br>
+
+        <label for="keyup">On Key Up:</label>
+        <input type="text" id="keyup" onkeyup="showAlert(event, 'keyup')"><br><br>
+
+        <label for="keypress">On Key Press:</label>
+        <input type="text" id="keypress" onkeypress="showAlert(event, 'keypress')"><br><br>
+
+    </form>
+
+    <script>
+        function showAlert(event, eventType) {
+            alert(`Key pressed: ${event.key}\nEvent type: ${eventType}`);
+        }
+    </script>
+    
+
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h2>Keyboard Events Form</h2>
+    <form id="keyboardForm">
+        <label for="inputField">Type something:</label>
+        <input type="text" id="inputField" name="inputField" placeholder="Start typing...">
+    </form>
+
+    <div id="eventLog">
+        <h3>Event Log:</h3>
+        <ul id="logList"></ul>
+    </div>
+
+    <script>
+        const inputField = document.getElementById('inputField');
+        const logList = document.getElementById('logList');
+
+
+
+        inputField.addEventListener('keydown', function(event) {
+            const logItem = document.createElement('li');
+            logItem.textContent = `Key Down: ${event.key} (Code: ${event.code})`;
+            logList.appendChild(logItem);
+        });
+
+        inputField.addEventListener('keyup', function(event) {
+            const logItem = document.createElement('li');
+            logItem.textContent = `Key Up: ${event.key} (Code: ${event.code})`;
+            logList.appendChild(logItem);
+        });
+        inputField.addEventListener('keypress', function(event) {
+            const logItem = document.createElement('li');
+            logItem.textContent = `Key Press: ${event.key} (Code: ${event.code})`;
+            logList.appendChild(logItem);
+        });
+    </script>
+
+
+    
+
+</body>
+</html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <label for="keydown">On Key Down:</label>
+        <input type="text" id="keydown" onkeydown="showAlert(event, 'keydown')"><br><br>
+
+        <label for="keyup">On Key Up:</label>
+        <input type="text" id="keyup" onkeyup="showAlert(event, 'keyup')"><br><br>
+
+        <label for="keypress">On Key Press:</label>
+        <input type="text" id="keypress" onkeypress="showAlert(event, 'keypress')"><br><br>
+    </form>
+
+    <script>
+        function showAlert(event, eventType) {
+            alert(`Key pressed: ${event.key}\nEvent type: ${eventType}`);
+        }
+    </script>
+    
+</body>
+</html>

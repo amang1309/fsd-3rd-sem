@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+
+}
+#form{
+    width: 300px; 
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px red
+
+}
+
+p,input{
+    font-size: 16px;
+}
+input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: inset -3px 3px 10px #000;
+
+}
