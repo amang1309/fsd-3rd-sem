@@ -3,88 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Quiz Application - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Quiz Application </h1>
-    <form id="userForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
 
-        <label for="roll">Roll Number:</label>
-        <input type="text" id="roll" name="roll" required><br><br>
+    <div class="container">
+        <h1>Quiz Application</h1>
+        <form id="userForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" required><br><br>
 
-        <label for="class">Class/Section:</label>
-        <input type="text" id="class" name="class" required><br><br>
+            <label for="roll">Roll Number:</label><br>
+            <input type="text" id="roll" required><br><br>
 
-        <button type="submit">Start Quiz</button>
-    </form>
+            <label for="section">Class/Section:</label><br>
+            <input type="text" id="section" required><br><br>
 
-    <p> Q1. What is the capital of France? </p>
-    <form id="questionForm">
-        <input type="radio" id="paris" name="capital" value="Paris" required>
-        <label for="paris">Paris</label><br>
+            <button type="submit">Start Quiz</button>
+        </form>
+    </div>
 
-        <input type="radio" id="london" name="capital" value="London">
-        <label for="london">London</label><br>
-
-        <input type="radio" id="berlin" name="capital" value="Berlin">
-        <label for="berlin">Berlin</label><br>
-
-        <input type="radio" id="madrid" name="capital" value="Madrid">
-        <label for="madrid">Madrid</label><br><br>
-
-        <button type="submit">Next</button>
-    </form>
-
-    <p> Q2. What is 2 + 2? </p>
-    <form id="questionForm2">
-        <input type="radio" id="3" name="math" value="3" required>
-        <label for="3">3</label><br>
-
-        <input type="radio" id="4" name="math" value="4">
-        <label for="4">4</label><br>
-
-        <input type="radio" id="5" name="math" value="5">
-        <label for="5">5</label><br>
-
-        <input type="radio" id="6" name="math" value="6">
-        <label for="6">6</label><br><br>
-
-        <button type="submit">Next</button>
-    </form>
-
-    <p> Q3. What is the largest planet in our solar system? </p>
-    
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-    
+    <script src="script.js"></script>
 </body>
 </html>
-
-<!-- we have to create a quiz application using HTML, CSS, and JavaScript. 
-the web-application should contain multiple pages. 1st page should be the input page,
- where user need to fill in the name, roll and class/section. then from the next page, 
- questions start with options. one question on one page. 
- The application should present multiple-choice questions to the user, 
- allow them to select answers. then on every page, there should be a "Next" button to navigate to the next question.
-
- lets start.   -->
- <!-- start guiding me the code.  -->
-
-
-

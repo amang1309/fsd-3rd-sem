@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Quiz Box (Shows one question at a time) -->
+        <div id="quiz-box">
+            <p id="question-title"></p>
+            <form id="questionForm">
+                <div id="options-box">
+                    <!-- Options will load here via JavaScript -->
+                </div>
+                <br>
+                <button type="submit" id="next-btn">Next</button>
+            </form>
+        </div>
+
+        <!-- Result Box (Hidden until the quiz finishes) -->
+        <div id="result-box" class="hidden">
+            <h2>Quiz Completed!</h2>
+            <p id="user-info-display"></p>
+            <h3>Your Final Score: <span id="score">0</span> / <span id="total">0</span></h3>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
