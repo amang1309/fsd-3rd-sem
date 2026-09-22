@@ -1,20 +1,30 @@
 // List of Questions (You can easily add up to 10 here)
 const questions = [
     {
-        question: "Q1. What is the capital of France?",
-        options: ["Paris", "London", "Berlin", "Madrid"],
-        answer: "Paris"
+        question: "Q1. Which semester fsd you like the most?",
+        options: ["Sem1", "Sem2", "Sem3", "None of the Above"],
+        answer: "Sem3"
     },
     {
-        question: "Q2. What is 2 + 2?",
-        options: ["3", "4", "5", "6"],
-        answer: "4"
+        question: "Q2. Which CSS property is used to change the background color of an element?",
+        options: ["color", "bgcolor", "background-color", "background-image"],
+        answer: "background-color" // <-- Fixed: Changed from "4" to match the correct option text
     },
     {
         question: "Q3. Which language is used for web styling?",
         options: ["HTML", "Python", "CSS", "C++"],
         answer: "CSS"
-    }
+    },
+    {
+        question: "Q4. What is 2 + 2? ",
+        options: ["4", "6", "8", "9"],
+        answer: "4"
+    },
+    // {
+    //     question: "Q5. What HTML tag is used to create the largest heading on a webpage?", // <-- Fixed numbering to Q5
+    //     options: ["<head>", "<h1>", "<h6>", "<headings>"],
+    //     answer: "<h1>"
+    // }
 ];
 
 let currentIndex = 0;
