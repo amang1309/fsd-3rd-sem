@@ -8,7 +8,7 @@ const questions = [
     {
         question: "Q2. Which CSS property is used to change the background color of an element?",
         options: ["color", "bgcolor", "background-color", "background-image"],
-        answer: "background-color" // <-- Fixed: Changed from "4" to match the correct option text
+        answer: "background-color" 
     },
     {
         question: "Q3. Which language is used for web styling?",
@@ -30,23 +30,23 @@ const questions = [
 let currentIndex = 0;
 let score = 0;
 
-// 1. Handle Login Form
+
 const userForm = document.getElementById("userForm");
 if (userForm) {
     userForm.addEventListener("submit", function(e) {
         e.preventDefault();
         
-        // Save user details to browser memory
+        
         localStorage.setItem("name", document.getElementById("name").value);
         localStorage.setItem("roll", document.getElementById("roll").value);
         localStorage.setItem("section", document.getElementById("section").value);
 
-        // Move to quiz page
+        
         window.location.href = "quiz.html";
     });
 }
 
-// 2. Handle Quiz Questions
+
 const quizBox = document.getElementById("quiz-box");
 const resultBox = document.getElementById("result-box");
 const questionTitle = document.getElementById("question-title");
@@ -59,7 +59,7 @@ if (quizBox) {
     questionForm.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        // Get the selected radio button
+        
         const selectedOption = document.querySelector('input[name="quizOption"]:checked');
         
         if (!selectedOption) {
@@ -67,12 +67,12 @@ if (quizBox) {
             return;
         }
 
-        // Check if answer is correct
+        
         if (selectedOption.value === questions[currentIndex].answer) {
             score++;
         }
 
-        // Move to next question or show results
+        
         currentIndex++;
         if (currentIndex < questions.length) {
             loadQuestion();
@@ -85,9 +85,9 @@ if (quizBox) {
 function loadQuestion() {
     const currentQ = questions[currentIndex];
     questionTitle.innerText = currentQ.question;
-    optionsBox.innerHTML = ""; // Clear old options
+    optionsBox.innerHTML = ""; 
 
-    // Create radio buttons for each option dynamically
+    
     currentQ.options.forEach((opt, index) => {
         optionsBox.innerHTML += `
             <input type="radio" id="opt${index}" name="quizOption" value="${opt}" required>
@@ -100,7 +100,7 @@ function showResult() {
     quizBox.classList.add("hidden");
     resultBox.classList.remove("hidden");
 
-    // Display user info and final score
+    
     const name = localStorage.getItem("name");
     const roll = localStorage.getItem("roll");
     const section = localStorage.getItem("section");
