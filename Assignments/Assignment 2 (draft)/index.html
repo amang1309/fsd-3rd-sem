@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Student Activity Monitor</h1>
+        <p class="subtitle">Select an activity to record it.</p>
+
+        <section class="activity-box">
+            <button id="loginButton">Login</button>
+            <button id="assignmentButton">Submit Assignment</button>
+            <button id="logoutButton">Logout</button>
+            <button id="exitButton">Exit</button>
+        </section>
+
+        <p id="message" class="message">No activity recorded yet.</p>
+
+        <section class="history-box">
+            <h2>Activity History</h2>
+            <ul id="activityList"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

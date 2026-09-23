@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Activity Monitoring System</h1>
+        <p class="subtitle">Powered by EventEmitter Event-Driven Architecture</p>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <button id="loginBtn" class="btn login">Login</button>
+            <button id="assignmentBtn" class="btn assignment">Submit Assignment</button>
+            <button id="logoutBtn" class="btn logout">Logout</button>
+            <button id="exitBtn" class="btn exit">Exit</button>
+        </div>
+
+        <!-- Activity Log Console -->
+        <div class="console-box">
+            <div class="console-header">
+                <span>Activity Event Log</span>
+                <button id="clearBtn" class="clear-btn">Clear Log</button>
+            </div>
+            <div id="logContainer" class="log-container">
+                <p class="log-placeholder">Waiting for student activity events...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
